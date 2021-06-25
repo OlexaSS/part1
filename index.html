@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Play Free - #1 Porn Game</title>
+  <link href="./css/styles.css" rel="stylesheet" type="text/css">
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/ion.sound.min.js"></script>
+  <script src="./js/particles.min.js"></script>
+  <style>
+    #rating {
+      position: fixed;
+      bottom: 1em;
+      left: 1em;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="particles-js"></div>
+  <div id="volume" data-audio="true"> <img src="./img/no-mute.png"> </div>
+
+  <div id="rating">
+    <img src="./img/ratings.gif" />
+  </div>
+
+
+  <div id="bg">
+
+    <video loop="loop" muted="muted" autoplay="autoplay" playsinline="true" webkitplaysinline="true"
+      id="bgLandscapeHigh" preload="none">
+      <source src="#">
+    </video>
+  </div>
+  <div id="logox"><a href="#"><img src="./img/logo.png" alt="logo"></a></div>
+  <main>
+    <div class="questionaireWrap">
+      <div class="questionaire toggleDiv" id="q1">
+        <div class="overlay">
+          <div class="questionWrap">
+            <div class="questionWrap-inner"> <span class="question-title">WARNING</span> <span class="question">This sex
+                simulator is so extreme that some viewers may find it too disturbing</span> <a class="btn show_hide"
+                data-audio="choose_gender" rel="#q2">Continue</a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="questionaire toggleDiv" id="q2">
+        <div class="overlay">
+          <div class="questionWrap">
+            <div class="questionWrap-inner"> <span class="question">
+                <div class="it1">Choose</div>
+                <div class="it2">Your Gender</div>
+              </span> <a class="btn show_hide" data-audio="choose_sex_partner" rel="#q3">FEMALE</a> <a
+                class="btn show_hide" data-audio="choose_sex_partner" rel="#q3">MALE</a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="questionaire toggleDiv" id="q3">
+        <div class="overlay">
+          <div class="questionWrap">
+            <div class="questionWrap-inner"> <span class="question">
+                <div class="it1">CHOOSE YOUR</div>
+                <div class="it2">SEX PARTNER</div>
+              </span> <a class="btn show_hide" data-audio="choose_partners_age" rel="#q4">Innocent Step Daughter</a> <a
+                class="btn show_hide" data-audio="choose_partners_age" rel="#q4">Wild Step Sister</a> <a
+                class="btn show_hide" data-audio="choose_partners_age" rel="#q4">Neighborhood Milf</a><a
+                class="btn show_hide" data-audio="choose_partners_age" rel="#q4">Cheating Wife</a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="questionaire toggleDiv" id="q4">
+        <div class="overlay">
+          <div class="questionWrap">
+            <div class="questionWrap-inner"> <span class="question">
+                <div class="it1">CHOOSE YOUR</div>
+                <div class="it2">PARTNER'S AGE</div>
+              </span> <a class="btn show_hide" data-audio="Choose_game_difficulty" rel="#q5">TEEN</a> <a
+                class="btn show_hide" data-audio="Choose_game_difficulty" rel="#q5">MILF</a> <a class="btn show_hide"
+                data-audio="Choose_game_difficulty" rel="#q5">MATURE</a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="questionaire toggleDiv" id="q5">
+        <div class="overlay">
+          <div class="questionWrap">
+            <div class="questionWrap-inner"> <span class="question">
+                <div class="it1">CHOOSE GAME</div>
+                <div class="it2">DIFFICULTY</div>
+              </span> <a class="btn show_hide" data-audio="select_game_mode" rel="#q6">EASY</a><a class="btn show_hide"
+                data-audio="select_game_mode" rel="#q6">NORMAL</a><a class="btn show_hide" data-audio="select_game_mode"
+                rel="#q6">HARD</a><a class="btn show_hide" data-audio="select_game_mode" rel="#q6">EXTREME</a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="questionaire toggleDiv" id="q6">
+        <div class="overlay">
+          <div class="questionWrap">
+            <div class="questionWrap-inner"> <span class="question">
+                <div class="it1">SELECT YOUR</div>
+                <div class="it2">GAME MODE</div>
+              </span> <a class="btn show_hide" data-audio="must_be_18" rel="#q7">SINGLE PLAYER</a> <a
+                class="btn show_hide" data-audio="must_be_18" rel="#q7">MULTIPLAYER</a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="questionaire toggleDiv" id="q7">
+        <div class="overlay">
+          <div class="questionWrap">
+            <div class="questionWrap-inner"> <span class="question">
+                <div class="it1">Confirm</div>
+                <div class="it2">your age</div>
+              </span> <a class="btn-big show_hide" data-audio="dont_recoomend" rel="#q8">I am over 18 years old
+                <span>Get Started</span></a> </div>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </main>
+  <script>
+
+
+  </script>
+  <script type="text/javascript">
+
+    function checkResize() {
+      if ($(window).width() < 650) {
+        console.log("mobie");
+        var mobileBg = "./video/hentai1_portrait.mp4";
+        $("#bgLandscapeHigh source").attr("src", mobileBg);
+        $("#bg video")[0].load();
+      }
+      else if ($(window).width() > 650) {
+        console.log("desktop");
+        var desktopBg = "./video/hentai1.mp4";
+        $("#bgLandscapeHigh source").attr("src", desktopBg);
+        $("#bg video")[0].load();
+      }
+    }
+
+
+    $(document).ready(function () {
+      checkResize();
+      function showFinalBtn() {
+        $(".optzWrapper li > img").attr("src", "./img/check.png");
+        $(".optzWrapper > span").css("font-size", "28px").css("color", "white").html("GAME FOUND!");
+        $(".finalBtn").fadeIn();
+      }
+
+
+      function findRooms() {
+        var x = 1;
+        var interval = setInterval(function () {
+
+
+          $('#pick' + x).addClass("found");
+          $('#pick' + x).fadeIn("slow");
+          x++;
+          // cleanup
+          if (x == 5) {
+            clearInterval(interval);
+            showFinalBtn();
+            $(".bir").css("display", "none");
+            console.log(x);
+          }
+
+        }, 1400);
+      }
+      $("#q11 .btn").on("click", function () {
+        findRooms();
+
+      });
+
+      $(".bas").click(function () {
+        $(".bir").slideUp(50).delay(500).fadeIn(400);
+        $(".iki").slideUp(2500).delay(5000).fadeIn(400);
+      });
+
+      $(".bas2").click(function () {
+        $(".bir").slideUp(50).delay(500).fadeIn(400);
+        $(".uc").slideUp(2500).delay(5000).fadeIn(400);
+      });
+      $('.show_hide').showHide({ speed: 200, easing: '', changeText: 0, showText: 'View', hideText: '' });
+
+      particlesJS("particles-js", { "particles": { "number": { "value": 292, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#ffffff" }, "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 }, "image": { "src": "img/github.svg", "width": 100, "height": 100 } }, "opacity": { "value": 0.4649894976510016, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0, "sync": false } }, "size": { "value": 4, "random": true, "anim": { "enable": true, "speed": 48.7246327380807, "size_min": 0, "sync": false } }, "line_linked": { "enable": false, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 }, "move": { "enable": true, "speed": 1, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 600 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false, "mode": "bubble" }, "onclick": { "enable": false, "mode": "repulse" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 250, "size": 0, "duration": 2, "opacity": 0, "speed": 3 }, "repulse": { "distance": 400, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true });
+
+
+      soundStatus = true;
+      if (soundStatus) {
+        volume = 1;
+
+        ion.sound({
+          sounds: [
+            {
+              name: "snap"
+            },
+            {
+              name: "choose_gender"
+            },
+            {
+              name: "choose_sex_partner"
+            },
+            {
+              name: "choose_partners_age"
+            },
+            {
+              name: "Choose_game_difficulty"
+            },
+            {
+              name: "select_game_mode"
+            },
+            {
+              name: "must_be_18"
+            },
+          ],
+          volume: 0,
+          path: "/audio/",
+          preload: true,
+          multiplay: false
+        });
+
+      }
+
+
+      if (soundStatus == true) {
+        a1 = new Audio('./audio/intro2.mp3');
+        a1.volume = 0.4;
+        a1.play();
+      }
+
+
+      $(".btn, .btn-big").on("click", function () {
+        ion.sound.stop();
+        ion.sound.play("snap");
+        if ($(this).attr('data-audio') !== undefined) {
+
+          if (soundStatus == true) {
+            if ($(this).attr('data-audio') == "choose_gender") {
+              //ion.sound.play("welcome_xxx");
+              //a1 = new Audio('t23/audio/en/intro2.mp3');
+              //a1.volume = 0.4;
+              //a1.play();
+            }
+          }
+          ion.sound.play($(this).attr('data-audio'));
+        }
+      });
+
+      $("#volume").on("click", function () {
+        volStatus = $(this).attr("data-audio");
+        if (volStatus === "true") {
+          soundStatus = false;
+          $(this).attr('data-audio', 'false');
+          $(this).html('<img src="./img/mute.png">');
+          volume = 0;
+          ion.sound.volume(false, { volume: 0 });
+          //ion.sound.pause("intro2");
+          a1.pause();
+          ion.sound.pause("vc");
+        } else {
+          soundStatus = true;
+          $(this).attr('data-audio', 'true');
+          $(this).html('<img src="./img/no-mute.png">');
+          volume = 1;
+          ion.sound.volume(false, { volume: 1 });
+          //ion.sound.play("intro2");
+          a1.play();
+          ion.sound.play("vc");
+
+        }
+      });
+
+    });
+
+
+
+  </script>
+
+</body>
+
+</html>
